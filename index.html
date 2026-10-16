@@ -214,6 +214,18 @@
   .facts small{display:block;font-size:13px;color:#5D5764;line-height:1.4}
   .event-actions{display:flex;gap:12px;flex-wrap:wrap}
   .event-actions .btn{padding:13px 24px;font-size:15.5px}
+  /* "live" register button: a colour band runs round the border, with a soft pulsing glow */
+  @property --live-ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+  .btn-live,.btn-live:hover{border:4px solid transparent;
+    background:linear-gradient(var(--btn-fill,var(--orange)),var(--btn-fill,var(--orange))) padding-box,
+      conic-gradient(from var(--live-ang),#FF7A00,#FFD23F,#2BB3A3,#2563EB,#7C3AED,#962A8B,#E0457B,#FF7A00) border-box;
+    animation:liveSpin 2.6s linear infinite,liveGlow 2.6s ease-in-out infinite}
+  .btn-live:hover{--btn-fill:var(--orange-hover)}
+  .event-actions .btn-live{padding:11px 22px}
+  @keyframes liveSpin{to{--live-ang:360deg}}
+  @keyframes liveGlow{0%,100%{box-shadow:0 6px 16px rgba(255,122,0,.28),0 0 0 0 rgba(150,42,139,0)}
+    50%{box-shadow:0 6px 18px rgba(255,122,0,.34),0 0 18px 3px rgba(150,42,139,.38)}}
+  @media (prefers-reduced-motion:reduce){ .btn-live{animation:none} }
   .event .btn-ghost{color:var(--uq-purple);border-color:rgba(81,36,122,.45);background:rgba(255,255,255,.55)}
   .event .btn-ghost:hover{background:#fff;border-color:var(--uq-purple)}
   .countdown{margin-top:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
@@ -642,7 +654,7 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><span>Deadline</span><b>Sunday 15 November 2026</b><small>Registration &amp; abstracts</small></div></li>
         </ul>
         <div class="event-actions">
-          <a class="btn btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSdSW0BPt0msqhlvz7iwA_i1AJfPW9ydNLCYFzxUiKchZwnKkA/viewform" target="_blank" rel="noopener">Register / submit abstract</a>
+          <a class="btn btn-orange btn-live" href="https://docs.google.com/forms/d/e/1FAIpQLSdSW0BPt0msqhlvz7iwA_i1AJfPW9ydNLCYFzxUiKchZwnKkA/viewform" target="_blank" rel="noopener">Register / submit abstract</a>
           <a class="btn btn-ghost" href="mailto:cald_hdr@uq.edu.au">Email: cald_hdr@uq.edu.au</a>
         </div>
         <div class="countdown" id="countdown" role="timer" hidden>
