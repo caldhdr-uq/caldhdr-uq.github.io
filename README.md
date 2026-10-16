@@ -8,12 +8,11 @@ Live site: https://yatarek.github.io/cald-uq.github.io/
 
 | Path | What it is |
 |---|---|
-| `index.html` | The whole site. Each page (About, Program, 2026 Symposium, Committee, Resources, Contact) is a section switched from the sidebar, and links such as `#committee` open a page directly. |
-| `img/header-banner.webp`, `img/scene/` | The animated header: the artwork as a still background, plus the cut-out character pieces that move. |
+| `index.html` | The whole site on one page: About, Registration, Speakers, Symposium day, Organisers and Contact, with the sponsor in the footer. Links such as `#speakers` jump straight to a section. |
 | `img/cald-logo.webp` | CALD logo in the top bar. |
+| `img/uq-logo-reversed.svg` | White UQ logo for the Sponsors block in the footer. |
 | `img/jacaranda-uq.jpg` | Background photo for the About banner. |
-| `img/committee/` | Committee photos. |
-| `img/unis/` | University icons on the Symposium page. |
+| `img/committee/` | Organiser photos. |
 | `qr-code.png` | QR code for the 2026 Symposium registration form. |
 
 ## Updating the site
@@ -22,10 +21,12 @@ Edit `index.html`, then commit and push to `main`. GitHub Pages republishes auto
 
 Useful places to search for in `index.html`:
 
-- `view-events`: 2026 Symposium details, dates and registration
-- `view-committee`: committee members
-- `view-resources`: resource links
-- `view-contact`: contact details
+- `id="registration"`: 2026 Symposium details, dates and registration
+- `id="speakers"`: welcome addresses and symposium speakers
+- `id="schedule"`: symposium day schedule table, venue and date
+- `id="organisers"`: organisers (the forum committee)
+- `f-sponsor`: Sponsors block in the footer
+- `id="contact"`: contact details
 
 ## Previewing locally
 
@@ -37,7 +38,7 @@ Then open http://localhost:4173.
 
 ## Credits
 
-- Header artwork and CALD logo: supplied by the forum.
+- CALD logo: supplied by the forum.
 - About banner photo: Genevieve Mackintosh, from UQ Contact magazine, "UQ in bloom" (2021).
-- Committee photos: UQ Experts profiles.
-- University icons: each university's official website icon.
+- Organiser photos and positions: UQ Experts profiles.
+- UQ logo: The University of Queensland (static.uq.net.au).
