@@ -11,7 +11,7 @@ Live site: https://yatarek.github.io/cald-uq.github.io/
 | `index.html` | The whole site on one page: About, Registration, Speakers, Symposium day, Organisers and Contact, with the sponsor in the footer. Links such as `#speakers` jump straight to a section. |
 | `img/cald-logo.webp` | CALD logo in the top bar. |
 | `img/uq-logo-reversed.svg` | White UQ logo for the Sponsors block in the footer. |
-| `img/hero-concept.jpg` | Banner illustration behind the top heading. |
+| `img/hero-concept.jpg`, `img/hero-concept@2x.jpg` | Banner illustration behind the top heading (the @2x copy is for high-resolution screens). |
 | `img/committee/` | Organiser photos. |
 | `img/speakers/` | Welcome address and speaker photos. |
 | `qr-code.png` | QR code for the 2026 Symposium registration form. |
