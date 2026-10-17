@@ -2,7 +2,7 @@
 
 Website of the Culturally and Linguistically Diverse (CALD) HDR Engagement Forum at The University of Queensland.
 
-Live site: https://yatarek.github.io/cald-uq.github.io/
+Live site: https://caldhdr-uq.github.io/ (the old address https://yatarek.github.io/cald-uq.github.io/ forwards here)
 
 ## What's in this repository
 
