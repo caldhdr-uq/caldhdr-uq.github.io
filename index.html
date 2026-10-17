@@ -107,8 +107,7 @@
   @keyframes gridPan{to{background-position:58px 58px}}
   /* motion layer: drifting colour glows and letters from many scripts rising through */
   .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-  .hero-photo{position:absolute;inset:0;background:#E9DFF5 url('img/hero-concept.jpg?v=4') 50% 50% / cover no-repeat;
-    background-image:image-set(url('img/hero-concept.jpg?v=4') 1x,url('img/hero-concept@2x.jpg?v=4') 2x);
+  .hero-photo{position:absolute;inset:0;background:#E9DFF5 url('img/hero-banner.jpg?v=1') 50% 50% / cover no-repeat;
     filter:blur(2.5px) saturate(1.05)}
   .hero-photo::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.08)}
   .hero-bg .blob{position:absolute;width:46%;aspect-ratio:1;border-radius:50%;
@@ -458,7 +457,7 @@
   /* the picture gets whatever height is left once the text fits, so the Register button shows without scrolling */
   .hero-bg{position:relative;inset:auto;width:auto;max-width:calc(100% - 48px);margin:22px auto 0;
     height:var(--hero-img-h,clamp(170px,calc(100svh - var(--topbar-h) - 590px),400px));
-    aspect-ratio:2000 / 989;border-radius:16px;box-shadow:0 18px 44px rgba(81,36,122,.26);border:1px solid rgba(255,255,255,.9)}
+    aspect-ratio:1983 / 793;border-radius:16px;box-shadow:0 18px 44px rgba(81,36,122,.26);border:1px solid rgba(255,255,255,.9)}
   .hero-bg .blob{display:none}
   .hero-photo::after,html[data-theme="dark"] .hero-photo::after{background:none}
   .hero .hero-inner{width:100%;padding:20px 24px 30px}
@@ -502,6 +501,9 @@
   .people.org .person img,.people.org .person .initials{width:140px;height:140px;font-size:36px}
   /* welcome addresses: the four DVCs stay on one row until phone width */
   .nw{white-space:nowrap}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .people.org.keynote{grid-template-columns:minmax(0,340px);justify-content:center}
+  .people.org.keynote .person img{width:160px;height:160px}
   .people.org.welcome{column-gap:12px}
   .people.org.welcome .person{padding-left:2px;padding-right:2px}
   @media (max-width:860px){
@@ -653,7 +655,7 @@
   <div class="hero-bg" aria-hidden="true"><div class="hero-photo"></div><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i></div>
   <div class="hero-inner">
     <p class="hero-kicker">Call for registration &amp; abstracts</p>
-    <h1>Enhancing CALD HDR Employability in a Changing World</h1>
+    <h1 class="sr-only">Enhancing CALD HDR Employability in a Changing World</h1>
     <p class="hero-sub">2026 CALD HDR Symposium</p>
     <p class="lede">Registration is open to HDR students and attendees from universities across Queensland. All participants must register for the Symposium. If you would also like to present your research, you may submit an abstract as part of the same registration form.</p>
     <p class="place">Tuesday, 15 December 2026<br>The University of Queensland, St Lucia Campus, Brisbane</p>
@@ -751,7 +753,7 @@
     <div class="sec-head">
       <p class="kicker">2026 CALD HDR Symposium</p>
       <h2>Speakers</h2>
-      <p>The symposium opens with welcome addresses from four of UQ's Deputy Vice-Chancellors, followed by talks from our invited speakers.</p>
+      <p>The symposium opens with welcome addresses from four of UQ's Deputy Vice-Chancellors and a keynote from Professor Caroline Rueckert of Griffith University, followed by talks from our invited speakers.</p>
     </div>
     <div class="group">
       <h3 class="group-title">Welcome addresses</h3>
@@ -775,6 +777,17 @@
           <img src="img/speakers/rongyu-li.jpg" alt="Rongyu Li" loading="lazy">
           <b>Rongyu Li</b>
           <span class="school">Deputy <span class="nw">Vice-Chancellor</span> and<br><span class="nw">Vice-President</span> <span class="nw">(Global Engagement)</span><br>The University of Queensland</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-title">Keynote speaker</h3>
+      <div class="people org keynote">
+        <a class="person" href="https://experts.griffith.edu.au/40612-caroline-rueckert" target="_blank" rel="noopener">
+          <img src="img/speakers/caroline-rueckert.jpg" alt="Professor Caroline Rueckert" loading="lazy">
+          <b>Caroline Rueckert</b>
+          <span class="school">Professor<br>Dean, Student Experience and Employability<br>Griffith University</span>
         </a>
       </div>
     </div>
@@ -840,7 +853,7 @@
           <tr class="day"><td colspan="2">Tuesday, 15 December 2026</td></tr>
           <tr><td>08:30 – X</td><td><b>Registration</b><span class="who">Room 222, Parnell Building (07)</span></td></tr>
           <tr><td>X</td><td><b>Welcome addresses</b><span class="who">Sue Harrison, Deputy Vice-Chancellor (Research and Innovation)</span><span class="who">Kris Ryan, Deputy Vice-Chancellor (Academic)</span><span class="who">Bronwyn Fredericks, Deputy Vice-Chancellor (Indigenous Engagement)</span><span class="who">Rongyu Li, Deputy Vice-Chancellor and Vice-President (Global Engagement)</span></td></tr>
-          <tr><td>X</td><td><b>Keynote speech:</b> X, “X”<span class="who">X</span><i>Chair: X</i></td></tr>
+          <tr><td>X</td><td><b>Keynote speech:</b> Caroline Rueckert, “X”<span class="who">Griffith University</span><i>Chair: X</i></td></tr>
           <tr class="brk"><td>X</td><td><b>Morning tea</b></td></tr>
           <tr><td>X</td><td><b>HDR research presentations, session 1</b><i>Chair: X</i></td></tr>
           <tr class="brk"><td>X</td><td><b>Group photo &amp; lunch</b></td></tr>
