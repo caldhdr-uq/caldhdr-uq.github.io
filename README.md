@@ -11,7 +11,7 @@ Live site: https://yatarek.github.io/cald-uq.github.io/
 | `index.html` | The whole site on one page: About, Registration, Speakers, Symposium day, Organisers and Contact, with the sponsor in the footer. Links such as `#speakers` jump straight to a section. |
 | `img/cald-logo.webp` | CALD logo in the top bar. |
 | `img/uq-logo-reversed.svg` | White UQ logo for the Sponsors block in the footer. |
-| `img/jacaranda-uq.jpg` | Background photo for the About banner. |
+| `img/hero-concept.jpg` | Banner illustration behind the top heading. |
 | `img/committee/` | Organiser photos. |
 | `img/speakers/` | Welcome address and speaker photos. |
 | `qr-code.png` | QR code for the 2026 Symposium registration form. |
@@ -40,7 +40,7 @@ Then open http://localhost:4173.
 ## Credits
 
 - CALD logo: supplied by the forum.
-- About banner photo: Genevieve Mackintosh, from UQ Contact magazine, "UQ in bloom" (2021).
+- Banner illustration: supplied by the forum.
 - Organiser photos and positions: UQ Experts profiles.
 - Deputy Vice-Chancellor photos: UQ Senior Executive Team page.
 - UQ logo: The University of Queensland (static.uq.net.au).
