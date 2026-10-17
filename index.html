@@ -432,10 +432,15 @@
   .hero-photo::after{background:linear-gradient(180deg,rgba(28,14,42,.40),rgba(28,14,42,.58))}
   .hero-inner::before{display:none}
   .hero-inner{padding:96px 24px 88px}
-  .hero h1{color:#fff;font-weight:700;font-size:clamp(2rem,4.4vw,3.25rem);text-wrap:balance;max-width:1000px;margin:0 auto 18px;
+  .hero-kicker{display:block;width:fit-content;margin:0 auto 18px;padding:9px 20px;border-radius:8px;
+    background:var(--orange);color:#2C1344;font-weight:800;font-size:clamp(.82rem,1.4vw,1rem);letter-spacing:.12em;
+    text-transform:uppercase;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+  .hero h1{color:#fff;font-weight:800;font-size:clamp(2rem,4.4vw,3.25rem);text-wrap:balance;max-width:1000px;margin:0 auto 12px;
     text-shadow:0 2px 14px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.35)}
-  .hero .lede{color:#fff;font-weight:600;font-size:clamp(1.05rem,2.2vw,1.45rem);max-width:860px;text-wrap:balance;
+  .hero-sub{color:#FFD9A8;font-weight:700;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.7rem);margin:0 auto 16px;
     text-shadow:0 1px 10px rgba(0,0,0,.55)}
+  .hero .lede{color:#fff;font-weight:600;font-size:clamp(1rem,1.8vw,1.2rem);line-height:1.6;max-width:820px;text-wrap:balance;
+    margin:0 auto 18px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
   .hero .place{color:#fff;font-weight:700;font-size:clamp(.95rem,1.6vw,1.2rem);max-width:900px;margin:0 auto 30px;text-wrap:balance;
     text-shadow:0 1px 8px rgba(0,0,0,.55)}
 
@@ -456,6 +461,12 @@
   .people.org.org3{grid-template-columns:repeat(3,minmax(0,1fr));max-width:calc(75% - 5px)}
   .people.org .person{padding:8px 6px}
   .people.org .person img,.people.org .person .initials{width:140px;height:140px;font-size:36px}
+  /* welcome addresses: the four DVCs stay on one row until phone width */
+  @media (max-width:860px){
+    .people.org.org4.welcome{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .people.org.welcome .person img{width:118px;height:118px}
+  }
+  @media (max-width:640px){ .people.org.org4.welcome{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (max-width:860px){
     .people.org.org4{grid-template-columns:repeat(3,minmax(0,1fr))}
     .people.org.org3{max-width:none}
@@ -499,6 +510,7 @@
     .content{padding:8px 16px 56px}
     .view{padding-top:56px}
     .hero-inner{padding:64px 18px 58px}
+    .hero-kicker{letter-spacing:.07em;padding:8px 14px}
   }
 
   /* ---------- Light / dark mode ---------- */
@@ -568,6 +580,7 @@
   html[data-theme="dark"] .hero-inner::before{background:radial-gradient(closest-side,rgba(18,12,26,.78) 0%,rgba(18,12,26,.6) 58%,rgba(18,12,26,0) 100%)}
   html[data-theme="dark"] .hero h1{color:#F5EDFF;text-shadow:0 0 14px rgba(10,6,16,.9),0 0 3px rgba(10,6,16,.9)}
   html[data-theme="dark"] .hero .lede{color:#EDE6F5;text-shadow:0 0 10px rgba(10,6,16,.95),0 0 2px rgba(10,6,16,.95)}
+  html[data-theme="dark"] .hero-sub{color:#FFD9A8;text-shadow:0 0 10px rgba(10,6,16,.95),0 0 2px rgba(10,6,16,.95)}
   html[data-theme="dark"] .hero .place{color:#DCD3E6;text-shadow:0 0 8px rgba(10,6,16,.95),0 0 2px rgba(10,6,16,.95)}
 </style>
 </head>
@@ -593,9 +606,11 @@
 <header class="hero" id="top">
   <div class="hero-bg" aria-hidden="true"><div class="hero-photo"></div><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i><span class="drift" style="--x:2%;--c:#E8590C;--s:22px;--dur:16s;--d:-0.0s">ဈ</span><span class="drift" style="--x:6%;--c:#13968F;--s:29px;--dur:21s;--d:-1.9s">ឃ</span><span class="drift" style="--x:10%;--c:#C2185B;--s:22px;--dur:18s;--d:-3.8s">ቀ</span><span class="drift" style="--x:14%;--c:#2E6FC1;--s:29px;--dur:23s;--d:-5.7s">강</span><span class="drift" style="--x:18%;--c:#2F8F46;--s:22px;--dur:20s;--d:-7.6s">さ</span><span class="drift" style="--x:22%;--c:#7B2D8E;--s:29px;--dur:17s;--d:-9.5s">学</span><span class="drift" style="--x:26%;--c:#D97706;--s:22px;--dur:22s;--d:-11.4s">Ğ</span><span class="drift" style="--x:31%;--c:#0E7490;--s:29px;--dur:19s;--d:-13.3s">Δ</span><span class="drift" style="--x:37%;--c:#E8590C;--s:22px;--dur:16s;--d:-15.2s">Щ</span><span class="drift" style="--x:43%;--c:#13968F;--s:29px;--dur:21s;--d:-17.1s">ق</span><span class="drift" style="--x:49%;--c:#C2185B;--s:22px;--dur:18s;--d:-1.0s">ے</span><span class="drift" style="--x:55%;--c:#2E6FC1;--s:29px;--dur:23s;--d:-2.9s">ण</span><span class="drift" style="--x:61%;--c:#2F8F46;--s:22px;--dur:20s;--d:-4.8s">ゑ</span><span class="drift" style="--x:67%;--c:#7B2D8E;--s:29px;--dur:17s;--d:-6.7s">愛</span><span class="drift" style="--x:72%;--c:#D97706;--s:22px;--dur:22s;--d:-8.6s">Ł</span><span class="drift" style="--x:76%;--c:#0E7490;--s:29px;--dur:19s;--d:-10.5s">Ξ</span><span class="drift" style="--x:80%;--c:#E8590C;--s:22px;--dur:16s;--d:-12.4s">Ө</span><span class="drift" style="--x:84%;--c:#13968F;--s:29px;--dur:21s;--d:-14.3s">ك</span><span class="drift" style="--x:88%;--c:#C2185B;--s:22px;--dur:18s;--d:-16.2s">ٹ</span><span class="drift" style="--x:91%;--c:#2E6FC1;--s:29px;--dur:23s;--d:-0.1s">Ð</span><span class="drift" style="--x:94%;--c:#2F8F46;--s:22px;--dur:20s;--d:-2.0s">Þ</span><span class="drift" style="--x:97%;--c:#7B2D8E;--s:29px;--dur:17s;--d:-3.9s">Æ</span><span class="drift" style="--x:99%;--c:#D97706;--s:22px;--dur:22s;--d:-5.8s">Ŵ</span></div>
   <div class="hero-inner">
-    <h1>Culturally and Linguistically Diverse HDR Engagement Forum</h1>
-    <p class="lede">A welcoming and inclusive space for Higher Degree by Research students from diverse cultural and linguistic backgrounds.</p>
-    <p class="place">2026 CALD HDR Symposium · Tuesday, 15 December 2026<br>The University of Queensland, St Lucia Campus, Brisbane</p>
+    <p class="hero-kicker">Call for registration &amp; abstracts</p>
+    <h1>Enhancing CALD HDR Employability in a Changing World</h1>
+    <p class="hero-sub">2026 CALD HDR Symposium</p>
+    <p class="lede">Registration is open to HDR students and attendees from universities across Queensland. All participants must register for the Symposium. If you would also like to present your research, you may submit an abstract as part of the same registration form.</p>
+    <p class="place">Tuesday, 15 December 2026<br>The University of Queensland, St Lucia Campus, Brisbane</p>
     <div class="hero-cta">
       <a class="btn btn-orange" href="#registration">Register for the 2026 Symposium</a>
     </div>
@@ -690,29 +705,31 @@
     <div class="sec-head">
       <p class="kicker">2026 CALD HDR Symposium</p>
       <h2>Speakers</h2>
-      <p>The symposium opens with welcome addresses from three of UQ's Deputy Vice-Chancellors, followed by talks from our invited speakers.</p>
+      <p>The symposium opens with welcome addresses from four of UQ's Deputy Vice-Chancellors, followed by talks from our invited speakers.</p>
     </div>
     <div class="group">
       <h3 class="group-title">Welcome addresses</h3>
-      <div class="people lead">
-        <div class="person">
-          <span class="photo-blank" aria-hidden="true"></span>
-          <span class="role">Deputy Vice-Chancellor</span>
-          <b>X</b>
-          <span class="school">X</span>
-        </div>
-        <div class="person">
-          <span class="photo-blank" aria-hidden="true"></span>
-          <span class="role">Deputy Vice-Chancellor</span>
-          <b>X</b>
-          <span class="school">X</span>
-        </div>
-        <div class="person">
-          <span class="photo-blank" aria-hidden="true"></span>
-          <span class="role">Deputy Vice-Chancellor</span>
-          <b>X</b>
-          <span class="school">X</span>
-        </div>
+      <div class="people org org4 welcome">
+        <a class="person" href="https://about.uq.edu.au/leadership-governance/senior-executive-team/deputy-vice-chancellor-research-and-innovation" target="_blank" rel="noopener">
+          <img src="img/speakers/sue-harrison.jpg" alt="Professor Sue Harrison" loading="lazy">
+          <b>Sue Harrison</b>
+          <span class="school">Deputy Vice-Chancellor (Research and Innovation)<br>The University of Queensland</span>
+        </a>
+        <a class="person" href="https://about.uq.edu.au/leadership-governance/senior-executive-team/deputy-vice-chancellor-academic" target="_blank" rel="noopener">
+          <img src="img/speakers/kris-ryan.jpg" alt="Professor Kris Ryan" loading="lazy">
+          <b>Kris Ryan</b>
+          <span class="school">Deputy Vice-Chancellor (Academic)<br>The University of Queensland</span>
+        </a>
+        <a class="person" href="https://about.uq.edu.au/leadership-governance/senior-executive-team/deputy-vice-chancellor-indigenous-engagement" target="_blank" rel="noopener">
+          <img src="img/speakers/bronwyn-fredericks.jpg" alt="Professor Bronwyn Fredericks" loading="lazy">
+          <b>Bronwyn Fredericks</b>
+          <span class="school">Deputy Vice-Chancellor (Indigenous Engagement)<br>The University of Queensland</span>
+        </a>
+        <a class="person" href="https://about.uq.edu.au/leadership-governance/senior-executive-team/deputy-vice-chancellor-global-engagement" target="_blank" rel="noopener">
+          <img src="img/speakers/rongyu-li.jpg" alt="Rongyu Li" loading="lazy">
+          <b>Rongyu Li</b>
+          <span class="school">Deputy Vice-Chancellor and Vice-President (Global Engagement)<br>The University of Queensland</span>
+        </a>
       </div>
     </div>
 
@@ -776,7 +793,7 @@
           <tbody>
           <tr class="day"><td colspan="2">Tuesday, 15 December 2026</td></tr>
           <tr><td>08:30 – X</td><td><b>Registration</b><span class="who">Room 222, Parnell Building (07)</span></td></tr>
-          <tr><td>X</td><td><b>Welcome addresses</b><span class="who">X, Deputy Vice-Chancellor (X), The University of Queensland</span><span class="who">X, Deputy Vice-Chancellor (X), The University of Queensland</span><span class="who">X, Deputy Vice-Chancellor (X), The University of Queensland</span></td></tr>
+          <tr><td>X</td><td><b>Welcome addresses</b><span class="who">Sue Harrison, Deputy Vice-Chancellor (Research and Innovation)</span><span class="who">Kris Ryan, Deputy Vice-Chancellor (Academic)</span><span class="who">Bronwyn Fredericks, Deputy Vice-Chancellor (Indigenous Engagement)</span><span class="who">Rongyu Li, Deputy Vice-Chancellor and Vice-President (Global Engagement)</span></td></tr>
           <tr><td>X</td><td><b>Keynote speech:</b> X, “X”<span class="who">X</span><i>Chair: X</i></td></tr>
           <tr class="brk"><td>X</td><td><b>Morning tea</b></td></tr>
           <tr><td>X</td><td><b>HDR research presentations, session 1</b><i>Chair: X</i></td></tr>
