@@ -12,8 +12,6 @@ Live site: https://caldhdr-uq.github.io/ (the old address https://yatarek.github
 | `img/cald-logo.webp` | CALD logo in the top bar. |
 | `img/uq-logo-reversed.svg` | White UQ logo for the Sponsors block in the footer. |
 | `img/hero-banner.jpg` | Banner image at the top of the page. |
-| `img/committee/` | Organiser photos. |
-| `img/speakers/` | Welcome address and speaker photos. |
 | `qr-code.png` | QR code for the 2026 Symposium registration form. |
 
 ## Updating the site
@@ -41,7 +39,4 @@ Then open http://localhost:4173.
 
 - CALD logo: supplied by the forum.
 - Banner image: supplied by the forum.
-- Organiser photos and positions: UQ Experts profiles.
-- Deputy Vice-Chancellor photos: UQ Senior Executive Team page.
-- Keynote speaker photo: Griffith Experts profile.
 - UQ logo: The University of Queensland (static.uq.net.au).
